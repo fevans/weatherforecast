@@ -1,0 +1,5 @@
+pool:
+  vmImage: "ubuntu-latest"
+
+jobs:
+- job: publish_artifact
