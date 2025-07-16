@@ -58,7 +58,7 @@ jobs:
        uses: azure/webapps-deploy@v2
        with:
          app-name: weatherforecastdev
-         package: ZipDeploy/api-package
+         package: ZipDeployFile/api-package
        
   
 
