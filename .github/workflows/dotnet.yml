@@ -41,4 +41,25 @@ jobs:
         name: ZipDeployFile
         path: api-package.zip
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    -  uses: actions/download-artifact@v4.6.2
+       name: ZipDeployFile
+
+    -  name: Login to Azure
+       uses: azure/login@v1
+       with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+
+    -  name: Deploy to App service
+       uses: azure/webapps-deploy@v2
+       with:
+         app-name: weatherforecastdev
+         package: ZipDeploy/api-package
+       
+  
+
     
