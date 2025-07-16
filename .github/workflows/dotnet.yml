@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    -  uses: actions/download-artifact@v4.6.2
+    -  uses: actions/download-artifact@v4.3.0
        name: ZipDeployFile
 
     -  name: Login to Azure
